@@ -23,10 +23,14 @@ To use the toy example cloud, set minimum and maximum seeding resolution to 0.05
 
 # Publication
 Further details are available in our paper on the subject. If you use this code in an academic context, please cite the paper:
+Ge Gao, Mikko Lauri, Jianwei Zhang and Simone Frintrop. "Saliency-guided adaptive seeding for supervoxel segmentation", IROS 2017.
+
+BiBTeX:
+```
 @inproceedings{gaoetal2017ssv,
   title={Saliency-guided Adaptive Seeding for Supervoxel Segmentation},
   author={G. Gao, M. Lauri, J. Zhang and S. Frintrop},
   booktitle={IROS},
   year={2017}
 }
-
+```
