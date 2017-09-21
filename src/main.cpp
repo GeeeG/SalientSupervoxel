@@ -134,22 +134,6 @@ int main(int argc, char** argv)
     float elapsed = timer_ssv.elapsed();
     std::cout << "SSV Time elapsed: " << elapsed << " seconds.\n";
 
-    // original vccs
-    pcl::console::print_highlight ("VCCS Generating supervoxels...\n");
-    boost::timer timer_vccs;
-    pcl::SupervoxelClustering<SSV::PointT> super (voxel_resolution, min_seed_resolution);
-    super.setInputCloud (cloud);
-    super.setColorImportance (ssv_opt.color_weight_);
-    super.setSpatialImportance (ssv_opt.spatial_distance_weight_);
-    super.setNormalImportance (ssv_opt.normal_weight_);
-
-     std::map <uint32_t, pcl::Supervoxel<SSV::PointT>::Ptr > supervoxel_clusters;
-
-     super.extract (supervoxel_clusters);
-     SSV::PointLCloudT::Ptr labeled_voxel_cloud = super.getLabeledVoxelCloud ();
-     float elapsed_vccs = timer_vccs.elapsed();
-     std::cout << "VCCS Time elapsed: " << elapsed_vccs << " seconds.\n";
-
     boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
     viewer->initCameraParameters();
 
@@ -162,26 +146,12 @@ int main(int argc, char** argv)
     viewer->createViewPort (0.5, 0.0, 1.0, 1.0, v2);
     viewer->setBackgroundColor (0.0, 0.0, 0.0, v2);
 
-//    int v3(0);
-//    viewer->createViewPort (0.0, 0.0, 0.5, 0.5, v3);
-//    viewer->setBackgroundColor (0.0, 0.0, 0.0, v3);
-
-//    int v4(0);
-//    viewer->createViewPort (0.5, 0.0, 1.0, 0.5, v4);
-//    viewer->setBackgroundColor (0.0, 0.0, 0.0, v4);
-
     viewer->setBackgroundColor(0, 0, 0);
     viewer->addPointCloud(cloud, "point cloud", v1);
     viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_OPACITY,1.0, "point cloud");
 
-    viewer->addPointCloud(labeled_voxel_cloud, "labeled cloud",v2);
-    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_OPACITY,1.0, "labeled cloud");
-
-//    viewer->addPointCloud(ssv.get_clustered_cloud(0), "clustered_cloud",v3);
-//    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_OPACITY,1.0, "clustered_cloud");
-
-//    viewer->addPointCloud(result, "result",v4);
-//    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_OPACITY,1.0, "result");
+    viewer->addPointCloud(result, "ssv voxel",v2);
+    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_OPACITY,1.0, "ssv voxel");
 
     while (!viewer->wasStopped()) {
         viewer->spinOnce(100);
