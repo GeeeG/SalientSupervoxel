@@ -20,7 +20,7 @@ Please note that you need a saliency map (salmap.png) and the corresponding poin
 ```
 ./ssv_test cloud.pcd salmap.png -k 3 -i 0.05 -a 0.5
 ```
-A saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), for more information [computer vision group hamburg](https://www.inf.uni-hamburg.de/en/inst/ab/cv/research/research1-visual-attention.html)
+A saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), for more information refer to [Computer Vision Group @ Uni Hamburg](https://www.inf.uni-hamburg.de/en/inst/ab/cv/research/research1-visual-attention.html)
 
 # Publication
 Further details are available in our paper on the subject. If you use this code in an academic context, please cite the paper:
