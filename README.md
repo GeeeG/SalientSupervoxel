@@ -25,6 +25,7 @@ A saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), for
 # Publication
 Further details are available in our paper on the subject. If you use this code in an academic context, please cite the paper:
 Ge Gao, Mikko Lauri, Jianwei Zhang and Simone Frintrop. "Saliency-guided adaptive seeding for supervoxel segmentation", IROS 2017.
+[arxiv version](https://arxiv.org/abs/1704.04054)
 
 BiBTeX:
 ```
