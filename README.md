@@ -3,9 +3,9 @@ This is the C++ implementation of Saliency-guided adaptive seeding for supervoxe
 
 Here's an example output of SSV comparing with baseline approach Voxel Cloud Connectivity Segmentation (VCCS) in [pcl library](http://pointclouds.org/documentation/tutorials/supervoxel_clustering.php). 
 
-Left is the input point cloud, middle is oversegmentation result with uniformed seeding with VCCS, right is oversegmentation result with saliency-guided adaptive seeding with our approach (SSV).
+The basic idea is to grow smaller supervoxels in more salient regions and bigger supervoxels in less salient regions, by using visual saliency as prior knowledge.
 
-The basic idea is to grow smaller supervoxels in more salient regions and bigger supervoxels in less salient region, by using visual saliency as prior knowledge.
+Left is the input point cloud, middle is oversegmentation result with uniformed seeding with VCCS, right is oversegmentation result with saliency-guided adaptive seeding with our approach (SSV).
 
 ![ssv example](/fig/vccs_ssv_1.png?raw=true)
 
