@@ -26,7 +26,7 @@ make
 ```
 Please note that you need a saliency map (salmap.png) and the corresponding point cloud (cloud.pcd) to run this algorithm. Here is an example of setting minimum and maximum seeding resolution to 0.05 and 0.5 respectively, with 3 clusters for kmeans. 
 
-An set of .pcd and .png file example of a table scenario can be found under *example*.
+A set of .pcd and .png file example of a table scenario can be found under *example*.
 ```
 ./ssv_test table.pcd table.png -k 3 -i 0.05 -a 0.5
 ```
