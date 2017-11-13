@@ -33,7 +33,7 @@ An set of .pcd and .png file example of a table scenario can be found under *exa
 To test it on your own example, a saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), for more information refer to [Computer Vision Group @ Uni Hamburg](https://www.inf.uni-hamburg.de/en/inst/ab/cv/research/research1-visual-attention.html)
 
 # Results
-SSV is evaluated using superpixel-benchmark by [Stutz et al](https://github.com/davidstutz/superpixel-benchmark) with NYUV2 by [silberman et al](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) and SUNRGBD by [Song et al](http://rgbd.cs.princeton.edu/) datasets.
+SSV is evaluated using superpixel-benchmark by [Stutz et al](https://github.com/davidstutz/superpixel-benchmark) with NYUV2 by [Silberman et al](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) and SUNRGBD by [Song et al](http://rgbd.cs.princeton.edu/) datasets.
 
 Here are some results regarding boundary recall (REC) and undersegmentation error (UE) on SUNRGBD dataset.
 ![ssv result](/fig/results.png?raw=true)
