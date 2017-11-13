@@ -1,5 +1,6 @@
 # SalientSupervoxel
-This is the C++ implementation of Saliency-guided adaptive seeding for supervoxel segmentation.
+This is the C++ implementation of Saliency-guided adaptive seeding for supervoxel segmentation. 
+Average processing time on a 3.5 GHz Intel i7 CPU is approximately 0.6 second/frame.
 
 ![ssv example](/fig/vccs_ssv_1.png?raw=true)
 
