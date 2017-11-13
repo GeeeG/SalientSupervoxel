@@ -1,6 +1,8 @@
 # SalientSupervoxel
 This is the C++ implementation of Saliency-guided adaptive seeding for supervoxel segmentation.
 
+![ssv example](/fig/vccs_ssv_1.png?raw=true)
+
 # Usage
 Required dependency:
 1. opencv2
