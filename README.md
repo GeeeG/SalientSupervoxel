@@ -1,7 +1,7 @@
 # SalientSupervoxel
 This is the C++ implementation of Saliency-guided adaptive seeding for supervoxel segmentation (SSV). 
 
-Here's an example output of SSV comparing with baseline approach Voxel Cloud Connectivity Segmentation (VCCS) [pcl library](http://pointclouds.org/documentation/tutorials/supervoxel_clustering.php). Left is the input point cloud, middle is oversegmentation result with uniformed seeding with VCCS, right is oversegmentation result with saliency guided seeding with our approach (SSV).
+Here's an example output of SSV comparing with baseline approach Voxel Cloud Connectivity Segmentation (VCCS) [pcl library](http://pointclouds.org/documentation/tutorials/supervoxel_clustering.php). Left is the input point cloud, middle is oversegmentation result with uniformed seeding with VCCS, right is oversegmentation result with saliency-guided adaptive seeding with our approach (SSV).
 
 ![ssv example](/fig/vccs_ssv_1.png?raw=true)
 
@@ -25,6 +25,13 @@ Please note that you need a saliency map (salmap.png) and the corresponding poin
 ./ssv_test cloud.pcd salmap.png -k 3 -i 0.05 -a 0.5
 ```
 A saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), for more information refer to [Computer Vision Group @ Uni Hamburg](https://www.inf.uni-hamburg.de/en/inst/ab/cv/research/research1-visual-attention.html)
+
+# Results
+SSV is evaluated using superpixel-benchmark[davidstutz](https://github.com/davidstutz/superpixel-benchmark) with NYUV2[silberman](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) and SUNRGBD[song](http://rgbd.cs.princeton.edu/) datasets.
+
+Here are some results regarding boundary recall (REC) and undersegmentation error (UE) on SUNRGBD dataset.
+![ssv result](/fig/results.png?raw=true)
+
 
 # Performance
 The implementation is tested on a 3.5 GHz Intel i7 CPU.
