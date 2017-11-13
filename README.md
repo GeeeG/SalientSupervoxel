@@ -1,6 +1,6 @@
 # SalientSupervoxel
 This is the C++ implementation of Saliency-guided adaptive seeding for supervoxel segmentation (SSV). 
-```
+
 Here's an example output of SSV comparing with baseline approach Voxel Cloud Connectivity Segmentation (VCCS) [pcl library](http://pointclouds.org/documentation/tutorials/supervoxel_clustering.php). Left is the input point cloud, middle is oversegmentation result with uniformed seeding with VCCS, right is oversegmentation result with saliency guided seeding with our approach (SSV).
 
 ![ssv example](/fig/vccs_ssv_1.png?raw=true)
@@ -28,9 +28,9 @@ A saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), for
 
 # Performance
 The implementation is tested on a 3.5 GHz Intel i7 CPU.
-```
+
 Average processing time for baseline approach VCCS is 0.45 second/frame
-```
+
 Average processing time is for SSV varies w.r.t number of k-means clusters, e.g. with K=3,4,5 processing times are 0.71, 0.58 and 0.48 second/frame respectively.
 
 # Publication
