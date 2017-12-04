@@ -30,7 +30,7 @@ A set of .pcd and .png file example of a table scenario can be found under *exam
 ```
 ./ssv_test table.pcd table.png -k 3 -i 0.05 -a 0.5
 ```
-To test it on your own example, a saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), for more information refer to [Computer Vision Group @ Uni Hamburg](https://www.inf.uni-hamburg.de/en/inst/ab/cv/research/research1-visual-attention.html)
+To test it on your own example, a saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), you can find the instructions here [VOCUS2](https://github.com/GeeeG/VOCUS2) For more information on VOCUS2 please refer to [Computer Vision Group @ Uni Hamburg](https://www.inf.uni-hamburg.de/en/inst/ab/cv/research/research1-visual-attention.html)
 
 # Results
 SSV is evaluated using superpixel-benchmark by [Stutz et al](https://github.com/davidstutz/superpixel-benchmark) with NYUV2 by [Silberman et al](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) and SUNRGBD by [Song et al](http://rgbd.cs.princeton.edu/) datasets.
