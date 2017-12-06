@@ -17,11 +17,7 @@ Required dependency:
 Build and run
 ```
 mkdir build & cd build
-```
-```
 cmake ..
-```
-```
 make
 ```
 Please note that you need a saliency map (salmap.png) and the corresponding point cloud (cloud.pcd) to run this algorithm. Here is an example of setting minimum and maximum seeding resolution to 0.05 and 0.5 respectively, with 3 clusters for kmeans. 
@@ -33,7 +29,7 @@ A set of .pcd and .png file example of a table scenario can be found under *exam
 To test it on your own example, a saliency map can be generated using "VOCUS2" (Frintrop et al., CVPR 2015), you can find the instructions here [VOCUS2](https://github.com/GeeeG/VOCUS2). 
 ```
 git clone https://github.com/GeeeG/VOCUS2.git
-mkdir build & cd build
+cd vocus2-version1.1
 cmake . 
 make
 ./vocus2 test_img.png
